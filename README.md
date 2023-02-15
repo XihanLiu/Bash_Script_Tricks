@@ -31,11 +31,13 @@ grep -i -n "Keywords" <filename>
 #Add large files
 1.git lfs install
 
-# I am adding the deep learning model file
-git lfs track "*.h5"
-2. Commit and push to the GitHub
-git lfs push --all origin main
+#Activate TensorFlow on M1 Mac
+conda activate mlp
+jupyter notebook
 
+#Adding large files to Github
+git lfs track "*.h5"
+git lfs push --all origin main
 git add .
 git commit -am "add large file"
 git push -u origin main
